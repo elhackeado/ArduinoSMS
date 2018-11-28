@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SECRUINO</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+</resources>

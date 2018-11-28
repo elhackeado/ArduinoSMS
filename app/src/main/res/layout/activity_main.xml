@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutInside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:padding="10dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/textviewlabelSecruinono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_mono"
+            android:text="SECRUINO No. : "
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textviewsecruinono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/textviewlabelSecruinono"
+            android:fontFamily="@font/roboto_mono"
+            android:text="+919501086693"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutInside"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="ENGINE"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/engineon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/layoutInside"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/roboto_mono"
+        android:text="ENGINE          ON"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/engineoff"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/layoutInside"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/engineon"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/roboto_mono"
+        android:text="ENGINE       OFF"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/engineon"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="HORN"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/hornon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/engineoff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Horn          On"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/hornoff"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/engineoff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/hornon"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Horn           Off"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hornon"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="SOS"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/soson"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/hornon"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/engineindicator"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/roboto_mono"
+        android:text="SOS             ON"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/engine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="90dp"
+        android:background="@drawable/blackstroke"
+        android:fontFamily="@font/roboto_mono"
+        android:padding="6dp"
+        android:text="ENGINE"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/engineindicator"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/circlewhite"
+        android:layout_toRightOf="@+id/engine"
+        android:layout_marginLeft="3dp"
+
+
+        />
+
+
+    <TextView
+
+        android:id="@+id/horn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60dp"
+        android:layout_toRightOf="@+id/engine"
+        android:background="@drawable/blackstroke"
+        android:fontFamily="@font/roboto_mono"
+        android:padding="6dp"
+        android:text="HORN"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/hornindicator"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:src="@drawable/circlewhite"
+        android:layout_toRightOf="@+id/horn"
+
+
+        />
+
+</RelativeLayout>

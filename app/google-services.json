@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1064440577625",
+    "firebase_url": "https://arduinosms-f58b0.firebaseio.com",
+    "project_id": "arduinosms-f58b0",
+    "storage_bucket": "arduinosms-f58b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064440577625:android:cde4d85b8feac7e5",
+        "android_client_info": {
+          "package_name": "com.example.amanthakur.arduinosms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064440577625-v811qaj84dou0q5dkn3r72p93a0f4s7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.amanthakur.arduinosms",
+            "certificate_hash": "3fff654513369f8329f04e44ab328baaa23bb280"
+          }
+        },
+        {
+          "client_id": "1064440577625-79tmocfk3e019fkljjqjblihu5c8emen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbeflN0byhavBF-ytC0e_Uf33j_mgNJTQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064440577625-79tmocfk3e019fkljjqjblihu5c8emen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
