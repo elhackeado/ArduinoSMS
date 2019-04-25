@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -23,18 +24,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static java.lang.Thread.sleep;
+
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     BroadcastReceiver smsSentReceiver, smsDeliveredReceiver;
-    Button engineOn,engineOff,hornOn,hornOff,sosOn;
+    Button engineOn,engineOff,hornOn,hornOff,sosOn,GPSREQ;
     String smstext;
     String phoneno;
-    TextView secruinoNo;
+    TextView secruinoNo, location;
     ImageView imageView1,imageView2;
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
     int uri;
     int flag = 0;
     ProgressDialog progressDialog;
+    LocationManager mLocManager;
+    boolean GpsStatus;
+    Context context;
+    public static double latitude;
+    public static double longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +51,14 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("MyPrefs",MODE_PRIVATE);
         phoneno = sharedPreferences.getString("phoneno",null);
         secruinoNo = (TextView) findViewById(R.id.textviewsecruinono);
+        location = (TextView) findViewById(R.id.location);
         secruinoNo.setText("+91"+phoneno);
         engineOn = (Button) findViewById(R.id.engineon);
         engineOff = (Button) findViewById(R.id.engineoff);
         hornOn = (Button) findViewById(R.id.hornon);
         hornOff = (Button) findViewById(R.id.hornoff);
         sosOn = (Button) findViewById(R.id.soson);
+        GPSREQ = (Button) findViewById(R.id.GPSREQ);
         progressDialog = new ProgressDialog(MainActivity.this);
         progressDialog.setMessage("Initializing...");
         progressDialog.setCancelable(false);
@@ -111,6 +121,16 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
+        });
+        GPSREQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                    location.setText("Lat: 30.91496038579335, Lng: 74.65425304862849");
+
+                //Toast.makeText(MainActivity.this,, Toast.LENGTH_LONG).show();
+
+                }
         });
 
 
